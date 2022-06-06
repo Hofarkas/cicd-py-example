@@ -36,7 +36,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest --alluredir=allure-results
+        pytest --alluredir=./allure-results
         
     - name: Allure Report action from marketplace
       uses: simple-elf/allure-report-action@master
@@ -52,4 +52,4 @@ jobs:
       env:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: allure-history (módosítva)
+        PUBLISH_DIR: allure-history
